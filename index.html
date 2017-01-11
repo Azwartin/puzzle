@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='ru'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Puzzle</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				user-select: none;
+			}
+
+			body {
+				min-height: 100vh;
+				padding-top: 50px;
+				background-color: gray;
+				background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px); 
+			}
+
+			.game-canvas {
+					display: block;
+					border: 1px solid black;
+					margin: 10px auto;
+					background-image: url('img/dropimg.png');
+					background-position: center;
+					background-repeat: no-repeat;
+					cursor: pointer;
+			}
+
+			.icon-canvas {
+				display: none;
+				position: absolute;
+			}
+
+			.controls {
+				text-align: center;
+				font-family: cursive;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas class = 'game-canvas' width = '640' height = '480'>
+			Sorry, but your browser not supported canvas
+		</canvas>
+		<div class = 'controls'>
+			<label>
+				Количество частей по горизонтали
+				<input type = 'number' class = 'count-chunk-x' min = '0' max = '100'>
+			</label>
+			<label>
+				Количество частей по вертикали
+				<input type = 'number' class = 'count-chunk-y' min = '0' max = '100'>
+			</label>
+			<input type = 'button' class = 'btn-mix' value = 'Перемешать'>
+			<input type = 'file' class = 'btn-load' value = 'Загрузить'>
+		</div>
+		<canvas class = 'icon-canvas'>
+		</canvas>
+		<script src = 'js/loader.js'></script>
+		<script src = 'js/render.js'></script>
+		<script src = 'js/game.js'></script>
+		<script src = 'js/controller.js'></script>
+	</body>
+</html>
