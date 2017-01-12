@@ -1,0 +1,32 @@
+{
+  "name": "puzzle",
+  "version": "1.0.0",
+  "description": "simple puzzle game",
+  "main": "js/controller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azwartin/puzzle.git"
+  },
+  "keywords": [
+    "puzzle"
+  ],
+  "author": "r.nagaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azwartin/puzzle/issues"
+  },
+  "homepage": "https://github.com/Azwartin/puzzle#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^1.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^2.0.0"
+  }
+}

@@ -32,11 +32,11 @@
 						console.log(position);
 						position = game.chunkToPosition(chunk);
 					
-						render.renderIcon(position.i, position.j, e.clientX, e.clientY);
+						render.renderIcon(position.i, position.j, e.pageX, e.pageY);
 					});
 
-					canvas.addEventListener('mousemove', function(e){
-						render.moveIcon(e.clientX, e.clientY);
+					window.addEventListener('mousemove', function(e){
+						render.moveIcon(e.pageX, e.pageY);
 					});
 
 					btnMix.addEventListener('click', function() {
@@ -50,7 +50,7 @@
 					window.addEventListener('mouseup', function(e) {
 						render.hideIcon();
 						if(from) {
-							var to = render.coordinateToPosition(e.clientX, e.clientY),
+							var to = render.coordinateToPosition(e.pageX, e.pageY),
 								imFrom = game.chunkToPosition(game.getChunk(from.i, from.j)),
 								imTo = game.chunkToPosition(game.getChunk(to.i, to.j));
 
